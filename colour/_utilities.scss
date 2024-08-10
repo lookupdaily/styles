@@ -1,0 +1,33 @@
+$colours: (
+  primary: var(--ld-colour-primary),
+  primary-dark: var(--ld-colour-primary-dark),
+  primary-light: var(--ld-colour-primary-light),
+  secondary: var(--ld-colour-secondary),
+  secondary-dark: var(--ld-colour-secondary-dark),
+  secondary-light: var(--ld-colour-secondary-light),
+  grey: var(--ld-colour-grey),
+  white: var(--ld-colour-white),
+  black: var(--ld-colour-black),
+);
+
+$font-colours-for-backgrounds: (
+  primary: var(--ld-colour-white),
+  primary-dark: var(--ld-colour-white),
+  primary-light: var(--ld-colour-black),
+  secondary: var(--ld-colour-black),
+  secondary-dark: var(--ld-colour-black),
+  secondary-light: var(--ld-colour-black),
+  grey: var(--ld-colour-white),
+  white: var(--ld-colour-black),
+  black: var(--ld-colour-white),
+);
+
+@each $key, $value in $colours {
+  .ld-colour-#{"" + $key} {
+    color: $value;
+  }
+  .ld-background-#{"" + $key} {
+    background-color: $value;
+    color: map-get($font-colours-for-backgrounds, $key);
+  }
+}
