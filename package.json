@@ -2,7 +2,7 @@
   "name": "@lookupdaily/styles",
   "version": "1.0.0",
   "description": "My style library and utilities",
-  "main": "index.scss",
+  "main": "dist/index.css",
   "scripts": {
     "build": "sass index.scss dist/index.css --style=compressed"
   },
