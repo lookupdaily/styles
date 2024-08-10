@@ -1,2 +1,3 @@
-@import "./variables";
-@import "./utilities";
+@use "utilities";
+@use "variables";
+@include utilities.ld-colours(variables.$colours);
