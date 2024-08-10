@@ -1,2 +1,5 @@
 /node_modules/
-/dist/
+
+# Am packaging built files in the root of the directory, but don't want to commit them
+index.css
+index.css.map

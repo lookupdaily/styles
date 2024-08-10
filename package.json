@@ -2,9 +2,16 @@
   "name": "@lookupdaily/styles",
   "version": "1.0.0",
   "description": "My style library and utilities",
-  "main": "dist/index.css",
+  "main": "index.css",
+  "files": [
+    "src/**/*",
+    "index.css",
+    "index.css.map",
+    "package.json",
+    "README.md"
+  ],
   "scripts": {
-    "build": "sass src/index.scss dist/index.css --style=compressed",
+    "build": "sass src/index.scss index.css --style=compressed",
     "lint": "stylelint 'src/**/*.scss' && npx prettier . --check",
     "lint:fix": "npx stylelint 'src/**/*.scss' --fix && npx prettier . --write"
   },
