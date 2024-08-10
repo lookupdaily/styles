@@ -1,3 +1,5 @@
+@use "sass:map";
+
 $colours: (
   primary: var(--ld-colour-primary),
   primary-dark: var(--ld-colour-primary-dark),
@@ -9,7 +11,6 @@ $colours: (
   white: var(--ld-colour-white),
   black: var(--ld-colour-black),
 );
-
 $font-colours-for-backgrounds: (
   primary: var(--ld-colour-white),
   primary-dark: var(--ld-colour-white),
@@ -28,6 +29,6 @@ $font-colours-for-backgrounds: (
   }
   .ld-background-#{"" + $key} {
     background-color: $value;
-    color: map-get($font-colours-for-backgrounds, $key);
+    color: map.get($font-colours-for-backgrounds, $key);
   }
 }
