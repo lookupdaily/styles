@@ -5,7 +5,9 @@
   "main": "dist/index.css",
   "files":[
     "src/**/*",
-    "dist"
+    "dist",
+    "package.json",
+    "README.md"
   ],
   "scripts": {
     "build": "sass src/index.scss dist/index.css --style=compressed",
