@@ -1,0 +1,9 @@
+name: Lint
+
+on:
+  pull_request:
+    branches: ["main"]
+
+jobs:
+  lint-and-format-checks:
+    uses: lookupdaily/actions/.github/workflows/lint.yml@main
