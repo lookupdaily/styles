@@ -13,13 +13,17 @@
   "scripts": {
     "build": "sass src/index.scss index.css --style=compressed",
     "lint": "stylelint 'src/**/*.scss' && npx prettier . --check",
-    "lint:fix": "npx stylelint 'src/**/*.scss' --fix && npx prettier . --write"
+    "lint:fix": "npx stylelint 'src/**/*.scss' --fix && npx prettier . --write",
+    "test": "jest"
   },
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "glob": "^11.0.0",
+    "jest": "^29.7.0",
     "prettier": "^3.3.3",
     "sass": "^1.77.8",
+    "sass-true": "^8.0.0",
     "stylelint": "^16.8.1",
     "stylelint-config-standard-scss": "^13.1.0"
   }

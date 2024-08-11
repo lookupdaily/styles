@@ -1,11 +1,11 @@
-:root {
-  --ld-colour-primary: #4253f0;
-  --ld-colour-primary-dark: #0039cb;
-  --ld-colour-primary-light: #768fff;
-  --ld-colour-secondary: #ef9a9a;
-  --ld-colour-secondary-dark: #ba6b6c;
-  --ld-colour-secondary-light: #ffcccb;
-  --ld-colour-grey: #575757;
-  --ld-colour-white: #fff;
-  --ld-colour-black: #000;
-}
+$colours: (
+  primary: #4253f0,
+  primary-dark: #0039cb,
+  primary-light: #768fff,
+  secondary: #ef9a9a,
+  secondary-dark: #ba6b6c,
+  secondary-light: #ffcccb,
+  grey: #575757,
+  white: #fff,
+  black: #000,
+) !default;
