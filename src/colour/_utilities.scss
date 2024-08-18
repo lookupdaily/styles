@@ -21,10 +21,10 @@
 
   @each $key, $value in $colours {
     .ld-colour-#{"" + $key} {
-      color: $value;
+      color: var(--ld-colour-#{$key});
     }
     .ld-background-#{"" + $key} {
-      background-color: $value;
+      background-color: var(--ld-colour-#{$key});
       color: map.get($font-colours-for-backgrounds, $key);
     }
   }

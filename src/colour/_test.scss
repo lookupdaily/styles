@@ -24,16 +24,16 @@ $colours: (
         }
 
         .ld-background-primary {
-          background-color: #4253f0;
+          background-color: var(--ld-colour-primary);
           color: var(--ld-colour-white);
         }
 
         .ld-colour-primary-light {
-          color: #768fff;
+          color: var(--ld-colour-primary-light);
         }
 
         .ld-background-primary-light {
-          background-color: #768fff;
+          background-color: var(--ld-colour-primary-light);
           color: var(--ld-colour-black);
         }
       }
