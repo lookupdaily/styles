@@ -1,12 +1,11 @@
 @use "sass:map";
+@use "../functions/create-variables";
 
-@mixin ld-colours($colours) {
-  :root {
-    @each $key, $value in $colours {
-      --ld-colour-#{"" + $key}: #{$value};
-    }
-  }
+@mixin get-variables($colours) {
+  @include create-variables.map("colour", $colours);
+}
 
+@mixin create-classes($colours) {
   $font-colours-for-backgrounds: (
     primary: var(--ld-colour-white),
     primary-dark: var(--ld-colour-white),

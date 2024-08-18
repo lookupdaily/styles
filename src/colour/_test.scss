@@ -6,21 +6,16 @@ $colours: (
   primary-light: #768fff,
 );
 
-@include describe("Root variables") {
-  @include it("Creates root variables and utility classes for colour map") {
+@include describe("Colour utilities") {
+  @include it("Creates utility classes for colour map") {
     @include assert {
       @include output {
-        @include utilities.ld-colours($colours);
+        @include utilities.create-classes($colours);
       }
 
       @include expect {
-        :root {
-          --ld-colour-primary: #4253f0;
-          --ld-colour-primary-light: #768fff;
-        }
-
         .ld-colour-primary {
-          color: #4253f0;
+          color: var(--ld-colour-primary);
         }
 
         .ld-background-primary {
@@ -35,6 +30,23 @@ $colours: (
         .ld-background-primary-light {
           background-color: var(--ld-colour-primary-light);
           color: var(--ld-colour-black);
+        }
+      }
+    }
+  }
+
+  @include it("Creates list of variables for colour map") {
+    @include assert {
+      @include output {
+        .section {
+          @include utilities.get-variables($colours);
+        }
+      }
+
+      @include expect {
+        .section {
+          --ld-colour-primary: #4253f0;
+          --ld-colour-primary-light: #768fff;
         }
       }
     }
