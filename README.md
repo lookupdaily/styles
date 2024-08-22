@@ -38,6 +38,21 @@ Colours are available via global css-variables or utility classes
 
 Background colour classes are setup with a recommended font colour - e.g. when using a primary coloured background you should use a white font colour.
 
+### Typography
+
+| Content type | Variables          | Classes          |
+| ------------ | ------------------ | ---------------- |
+| Body         | --ld-font-body     | ld-text-body     |
+| Title        | --ld-font-title    | ld-text-title    |
+| Subtitle     | --ld-font-subtitle | ld-text-subtitle |
+| Logo         | --ld-font-logo     | ld-text-logo     |
+
+| Size | Variables              | Classes         |
+| ---- | ---------------------- | --------------- |
+| 19px | --ld-font-size-regular | ld-text-regular |
+| 24px | --ld-font-size-large   | ld-text-large   |
+| 55px | --ld-font-size-x-large | ld-tex-x-large  |
+
 ## Local development
 
 The project can be setup using npm
