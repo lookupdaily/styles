@@ -1,0 +1,53 @@
+@use "sass:map";
+@use "sass:string";
+@use "create-variables";
+@use "../settings";
+
+@mixin font-size($name) {
+  font-size: var(--ld-font-size-#{$name});
+}
+
+@mixin font-family($name) {
+  font-family: var(--ld-font-#{$name});
+}
+
+@mixin get-variables(
+  $fonts: settings.$fonts,
+  $font-sizes: settings.$font-sizes
+) {
+  @each $key, $value in $fonts {
+    $family: map.get($value, "family");
+
+    --ld-font-#{$key}: #{$family};
+  }
+
+  @include create-variables.map("font-size", $font-sizes);
+}
+
+@mixin create-classes(
+  $fonts: settings.$fonts,
+  $font-sizes: settings.$font-sizes
+) {
+  @each $key, $value in $fonts {
+    $font-size: map.get($value, "size");
+    $weight: map.get($value, "weight");
+
+    .ld-text-#{$key} {
+      font-family: var(--ld-font-#{$key});
+
+      @if $font-size {
+        font-size: var(--ld-font-size-#{$font-size});
+      }
+
+      @if $weight {
+        font-weight: #{$weight};
+      }
+    }
+  }
+
+  @each $key, $value in $font-sizes {
+    .ld-text-#{$key} {
+      font-size: var(--ld-font-size-#{$key});
+    }
+  }
+}
