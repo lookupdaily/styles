@@ -5,6 +5,52 @@ $colours: (
   primary: #4253f0,
   primary-light: #768fff,
 );
+$font-colours-for-backgrounds: (
+  primary: var(--ld-colour-white),
+  primary-light: var(--ld-colour-black),
+);
+
+@include describe("colour mixin") {
+  @include it("includes color property with matching variable") {
+    @include assert {
+      @include output {
+        .box {
+          @include colour.colour("primary");
+        }
+      }
+
+      @include expect {
+        .box {
+          color: var(--ld-colour-primary);
+        }
+      }
+    }
+  }
+}
+
+@include describe("background-colour mixin") {
+  @include it(
+    "includes background color property with matching variable and colour property"
+  ) {
+    @include assert {
+      @include output {
+        .box {
+          @include colour.background-colour(
+            "primary",
+            $font-colours-for-backgrounds
+          );
+        }
+      }
+
+      @include expect {
+        .box {
+          background-color: var(--ld-colour-primary);
+          color: var(--ld-colour-white);
+        }
+      }
+    }
+  }
+}
 
 @include describe("Colour utilities") {
   @include it("Creates utility classes for colour map") {

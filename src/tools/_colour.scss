@@ -2,6 +2,18 @@
 @use "create-variables";
 @use "../settings";
 
+@mixin colour($colour) {
+  color: var(--ld-colour-#{$colour});
+}
+
+@mixin background-colour(
+  $colour,
+  $font-colours-for-backgrounds: settings.$font-colours-for-backgrounds
+) {
+  background-color: var(--ld-colour-#{$colour});
+  color: map.get($font-colours-for-backgrounds, $colour);
+}
+
 @mixin get-variables($colours: settings.$colours) {
   @include create-variables.map("colour", $colours);
 }
