@@ -1,0 +1,65 @@
+@use "true" as *;
+@use "url-builder";
+
+@include describe("Typography functions") {
+  @include it(
+    "Creates a google font url from a font map object with one weight"
+  ) {
+    @include assert {
+      $font: (
+        family: "Alice",
+        weights: (
+          500,
+        ),
+      );
+
+      @include output {
+        $url: url-builder.google-font($font);
+      }
+
+      @include expect {
+        $url: "http://fonts.googleapis.com/css?family=Alice:wght@500;&display=swap";
+      }
+    }
+  }
+
+  @include it(
+    "Creates a google font url from a font map object with more than one weight"
+  ) {
+    @include assert {
+      $font: (
+        family: "Alice",
+        weights: (
+          500,
+          700,
+        ),
+      );
+
+      @include output {
+        $url: url-builder.google-font($font);
+      }
+
+      @include expect {
+        $url: "http://fonts.googleapis.com/css?family=Alice:wght@500;700;&display=swap";
+      }
+    }
+  }
+
+  @include it(
+    "Creates a google font url from a font map object with spaces in family"
+  ) {
+    @include assert {
+      $font: (
+        family: "Comic sans",
+      );
+
+      @include output {
+        $url: url-builder.google-font($font);
+      }
+
+      @include expect {
+        $url: "http://fonts.googleapis.com/css?family=Comic+sans&display=swap";
+      }
+    }
+  }
+}

@@ -1,0 +1,11 @@
+@use "../settings/typography" as variables;
+@use "url-builder";
+
+$body-url: url-builder.google-font(variables.$google-body-font);
+$title-url: url-builder.google-font(variables.$google-title-font);
+$logo-url: url-builder.google-font(variables.$google-logo-font);
+
+@import url("https://fonts.googleapis.com/icon?family=Material+Icons");
+@import url($body-url);
+@import url($title-url);
+@import url($logo-url);
