@@ -1,0 +1,34 @@
+@use "sass:map";
+@use "create-variables";
+@use "../settings";
+
+@mixin colour($colour) {
+  color: var(--ld-colour-#{$colour});
+}
+
+@mixin background-colour(
+  $colour,
+  $font-colours-for-backgrounds: settings.$font-colours-for-backgrounds
+) {
+  background-color: var(--ld-colour-#{$colour});
+  color: map.get($font-colours-for-backgrounds, $colour);
+}
+
+@mixin get-variables($colours: settings.$colours) {
+  @include create-variables.map("colour", $colours);
+}
+
+@mixin create-classes(
+  $colours: settings.$colours,
+  $font-colours-for-backgrounds: settings.$font-colours-for-backgrounds
+) {
+  @each $key, $value in $colours {
+    .ld-colour-#{"" + $key} {
+      color: var(--ld-colour-#{$key});
+    }
+    .ld-background-#{"" + $key} {
+      background-color: var(--ld-colour-#{$key});
+      color: map.get($font-colours-for-backgrounds, $key);
+    }
+  }
+}

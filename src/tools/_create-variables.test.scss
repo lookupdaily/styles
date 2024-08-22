@@ -1,0 +1,28 @@
+@use "true" as *;
+@use "create-variables";
+
+$variables: (
+  test: 1,
+  test-1: "2",
+  test-2: 3px,
+);
+
+@include describe("Create-variables") {
+  @include it("Map creates a variable for every key value pair with prefix") {
+    @include assert {
+      @include output {
+        .section {
+          @include create-variables.map("prefix", $variables);
+        }
+      }
+
+      @include expect {
+        .section {
+          --ld-prefix-test: 1;
+          --ld-prefix-test-1: 2;
+          --ld-prefix-test-2: 3px;
+        }
+      }
+    }
+  }
+}

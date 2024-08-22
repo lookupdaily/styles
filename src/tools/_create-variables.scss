@@ -1,0 +1,5 @@
+@mixin map($prefix, $variables) {
+  @each $key, $value in $variables {
+    --ld-#{$prefix}-#{"" + $key}: #{$value};
+  }
+}

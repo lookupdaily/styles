@@ -1,0 +1,22 @@
+$colours: (
+  primary: #4253f0,
+  primary-dark: #0039cb,
+  primary-light: #768fff,
+  secondary: #ef9a9a,
+  secondary-dark: #ba6b6c,
+  secondary-light: #ffcccb,
+  grey: #575757,
+  white: #fff,
+  black: #000,
+) !default;
+$font-colours-for-backgrounds: (
+  primary: var(--ld-colour-white),
+  primary-dark: var(--ld-colour-white),
+  primary-light: var(--ld-colour-black),
+  secondary: var(--ld-colour-black),
+  secondary-dark: var(--ld-colour-black),
+  secondary-light: var(--ld-colour-black),
+  grey: var(--ld-colour-white),
+  white: var(--ld-colour-black),
+  black: var(--ld-colour-white),
+);

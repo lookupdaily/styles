@@ -1,0 +1,5 @@
+@use "../tools/colour";
+
+:root {
+  @include colour.get-variables;
+}
