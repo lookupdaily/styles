@@ -24,6 +24,42 @@ $font-sizes: (
   large: 1.75rem,
 );
 
+@include describe("font-family mixin") {
+  @include it("includes font family property with matching variable") {
+    @include assert {
+      @include output {
+        .text {
+          @include typography.font-family("body");
+        }
+      }
+
+      @include expect {
+        .text {
+          font-family: var(--ld-font-body);
+        }
+      }
+    }
+  }
+}
+
+@include describe("font-size mixin") {
+  @include it("includes font size property with matching variable") {
+    @include assert {
+      @include output {
+        .text {
+          @include typography.font-size("regular");
+        }
+      }
+
+      @include expect {
+        .text {
+          font-size: var(--ld-font-size-regular);
+        }
+      }
+    }
+  }
+}
+
 @include describe("Typography utilities") {
   @include it("Creates utility classes for typography") {
     @include assert {

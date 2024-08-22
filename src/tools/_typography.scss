@@ -3,6 +3,14 @@
 @use "create-variables";
 @use "../settings";
 
+@mixin font-size($name) {
+  font-size: var(--ld-font-size-#{$name});
+}
+
+@mixin font-family($name) {
+  font-family: var(--ld-font-#{$name});
+}
+
 @mixin get-variables(
   $fonts: settings.$fonts,
   $font-sizes: settings.$font-sizes
