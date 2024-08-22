@@ -1,0 +1,78 @@
+@use "sass:map";
+
+$body-font: "Open Sans";
+$title-font: "Alice";
+$logo-font: "Montserrat";
+$icon-font: "Material Icons";
+$google-body-font: (
+  family: $body-font,
+  weights: (
+    500,
+    700,
+  ),
+);
+$google-title-font: (
+  family: $title-font,
+  weights: (
+    400,
+  ),
+);
+$google-logo-font: (
+  family: $logo-font,
+  weights: (
+    500,
+  ),
+);
+$font-sizes: (
+  regular: 1.1875rem,
+  large: 1.5rem,
+  x-large: 3.4375rem,
+) !default;
+$fonts: (
+  body: (
+    family: (
+      $body-font,
+      sans-serif,
+    ),
+    weight: 500,
+    size: "regular",
+  ),
+  title: (
+    family: (
+      $title-font,
+      serif,
+    ),
+    weight: 400,
+    size: "x-large",
+  ),
+  logo: (
+    family: (
+      $logo-font,
+      sans-serif,
+    ),
+    weight: 500,
+    size: "large",
+  ),
+  subtitle: (
+    family: (
+      $body-font,
+      sans-serif,
+    ),
+    weight: 500,
+    size: "large",
+  ),
+) !default;
+$icon-fonts: (
+  sm: (
+    family: $icon-font,
+    size: 1.125rem,
+  ),
+  md: (
+    family: $icon-font,
+    size: 1.5rem,
+  ),
+  lg: (
+    family: $icon-font,
+    size: 2.25rem,
+  ),
+) !default;

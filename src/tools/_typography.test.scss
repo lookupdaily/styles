@@ -1,0 +1,75 @@
+@use "true" as *;
+@use "typography";
+@use "sass:string";
+
+$fonts: (
+  body: (
+    family: (
+      "Alice",
+      serif,
+    ),
+    weight: 500,
+    size: "regular",
+  ),
+  heading: (
+    family: (
+      "Comic sans",
+      sans-serif,
+    ),
+    weight: 400,
+  ),
+);
+$font-sizes: (
+  regular: 1rem,
+  large: 1.75rem,
+);
+
+@include describe("Typography utilities") {
+  @include it("Creates utility classes for typography") {
+    @include assert {
+      @include output {
+        @include typography.create-classes($fonts, $font-sizes);
+      }
+
+      @include expect {
+        .ld-text-body {
+          font-family: var(--ld-font-body);
+          font-size: var(--ld-font-size-regular);
+          font-weight: 500;
+        }
+
+        .ld-text-heading {
+          font-family: var(--ld-font-heading);
+          font-weight: 400;
+        }
+
+        .ld-text-regular {
+          font-size: var(--ld-font-size-regular);
+        }
+
+        .ld-text-large {
+          font-size: var(--ld-font-size-large);
+        }
+      }
+    }
+  }
+
+  @include it("Creates list of variables to be included in a selector") {
+    @include assert {
+      @include output {
+        .section {
+          @include typography.get-variables($fonts, $font-sizes);
+        }
+      }
+
+      @include expect {
+        .section {
+          --ld-font-body: #{string.unquote("Alice")}, serif;
+          --ld-font-heading: #{string.unquote("Comic sans")}, sans-serif;
+          --ld-font-size-regular: 1rem;
+          --ld-font-size-large: 1.75rem;
+        }
+      }
+    }
+  }
+}

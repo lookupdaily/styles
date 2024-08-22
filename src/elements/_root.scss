@@ -1,5 +1,7 @@
 @use "../tools/colour";
+@use "../tools/typography";
 
 :root {
   @include colour.get-variables;
+  @include typography.get-variables;
 }
