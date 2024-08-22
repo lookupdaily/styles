@@ -1,5 +1,5 @@
 @use "true" as *;
-@use "utilities";
+@use "colour";
 
 $colours: (
   primary: #4253f0,
@@ -10,7 +10,7 @@ $colours: (
   @include it("Creates utility classes for colour map") {
     @include assert {
       @include output {
-        @include utilities.create-classes($colours);
+        @include colour.create-classes($colours, $font-colours-for-backgrounds);
       }
 
       @include expect {
@@ -39,7 +39,7 @@ $colours: (
     @include assert {
       @include output {
         .section {
-          @include utilities.get-variables($colours);
+          @include colour.get-variables($colours);
         }
       }
 

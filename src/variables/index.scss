@@ -1,6 +1,0 @@
-@use "../colour/utilities" as colour;
-@use "./variables";
-
-:root {
-  @include colour.get-variables(variables.$colours);
-}
