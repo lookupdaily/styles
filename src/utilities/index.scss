@@ -1,4 +1,5 @@
 @use "../tools/colour";
 @use "../tools/typography";
+@use "accessibility";
 @include colour.create-classes;
 @include typography.create-classes;
