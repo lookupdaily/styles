@@ -24,9 +24,11 @@ $google-logo-font: (
   ),
 );
 $font-sizes: (
+  small: 1rem,
   regular: 1.1875rem,
   large: 1.5rem,
-  x-large: 3.4375rem,
+  x-large: 2.25rem,
+  xx-large: 4.5rem,
 ) !default;
 $fonts: (
   body: (
@@ -42,8 +44,8 @@ $fonts: (
       $title-font,
       serif,
     ),
-    weight: 400,
-    size: "x-large",
+    weight: bold,
+    size: "xx-large",
   ),
   logo: (
     family: (
