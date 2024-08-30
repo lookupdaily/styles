@@ -1,0 +1,18 @@
+@use "../tools/colour";
+@use "../tools/typography";
+
+.ld-logo {
+  @include colour.colour("primary");
+  @include typography.text("logo");
+
+  &__link {
+    text-decoration: none;
+    color: inherit;
+  }
+
+  &__link:hover {
+    color: var(--ld-colour-primary-dark);
+    border-bottom: 3px solid var(--ld-colour-secondary);
+    background-color: transparent;
+  }
+}
