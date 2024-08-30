@@ -1,3 +1,6 @@
 @use "tools/imports";
 @use "elements";
 @use "utilities";
+@forward "tools/typography" hide get-variables, create-classes, get-size,
+  get-weight;
+@forward "tools/colour" hide get-variables, create-classes;

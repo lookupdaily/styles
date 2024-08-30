@@ -11,6 +11,20 @@
   font-family: var(--ld-font-#{$name});
 }
 
+@mixin text($name, $fonts: settings.$fonts) {
+  $font-map: map.get($fonts, $name);
+  $size: get-size($font-map);
+  $weight: get-weight($font-map);
+
+  @include font-family($name);
+
+  @if $size {
+    @include font-size($size);
+  }
+
+  font-weight: $weight;
+}
+
 @mixin get-variables(
   $fonts: settings.$fonts,
   $font-sizes: settings.$font-sizes
@@ -29,8 +43,8 @@
   $font-sizes: settings.$font-sizes
 ) {
   @each $key, $value in $fonts {
-    $font-size: map.get($value, "size");
-    $weight: map.get($value, "weight");
+    $font-size: get-size($value);
+    $weight: get-weight($value);
 
     .ld-text-#{$key} {
       font-family: var(--ld-font-#{$key});
@@ -50,4 +64,20 @@
       font-size: var(--ld-font-size-#{$key});
     }
   }
+}
+
+@function get-size($map) {
+  @if $map {
+    @return map.get($map, "size");
+  }
+
+  @return $map;
+}
+
+@function get-weight($map) {
+  @if $map {
+    @return map.get($map, "weight");
+  }
+
+  @return $map;
 }

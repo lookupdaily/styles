@@ -18,6 +18,12 @@ $fonts: (
     ),
     weight: 400,
   ),
+  sub-heading: (
+    family: (
+      "Alice",
+      sans-serif,
+    ),
+  ),
 );
 $font-sizes: (
   regular: 1rem,
@@ -60,6 +66,64 @@ $font-sizes: (
   }
 }
 
+@include describe("test mixin") {
+  @include it(
+    "includes font-family and font-size variable, plus weight value"
+  ) {
+    @include assert {
+      @include output {
+        .text {
+          @include typography.text("body", $fonts);
+        }
+      }
+
+      @include expect {
+        .text {
+          font-family: var(--ld-font-body);
+          font-size: var(--ld-font-size-regular);
+          font-weight: 500;
+        }
+      }
+    }
+  }
+
+  @include it(
+    "does note include font-size or weight if values aren't in the map"
+  ) {
+    @include assert {
+      @include output {
+        .text {
+          @include typography.text("sub-heading", $fonts);
+        }
+      }
+
+      @include expect {
+        .text {
+          font-family: var(--ld-font-sub-heading);
+        }
+      }
+    }
+  }
+
+  @include it(
+    "does note include font-size or weight if map isn't found for name"
+  ) {
+    @include assert {
+      @include output {
+        .text {
+          @include typography.text("test", $fonts);
+        }
+      }
+
+      @include expect {
+        .text {
+          font-family: var(--ld-font-test);
+        }
+      }
+    }
+  }
+}
+
 @include describe("Typography utilities") {
   @include it("Creates utility classes for typography") {
     @include assert {
@@ -77,6 +141,10 @@ $font-sizes: (
         .ld-text-heading {
           font-family: var(--ld-font-heading);
           font-weight: 400;
+        }
+
+        .ld-text-sub-heading {
+          font-family: var(--ld-font-sub-heading);
         }
 
         .ld-text-regular {
@@ -102,6 +170,7 @@ $font-sizes: (
         .section {
           --ld-font-body: #{string.unquote("Alice")}, serif;
           --ld-font-heading: #{string.unquote("Comic sans")}, sans-serif;
+          --ld-font-sub-heading: #{string.unquote("Alice")}, sans-serif;
           --ld-font-size-regular: 1rem;
           --ld-font-size-large: 1.75rem;
         }
