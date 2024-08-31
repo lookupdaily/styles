@@ -1,5 +1,6 @@
 @use "../settings/typography" as variables;
 @use "url-builder";
+@use "../../node_modules/normalize.css/normalize";
 
 $body-url: url-builder.google-font(variables.$google-body-font);
 $title-url: url-builder.google-font(variables.$google-title-font);
