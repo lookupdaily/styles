@@ -1,0 +1,3 @@
+@use "imports";
+@forward "typography" hide get-variables, create-classes, get-size, get-weight;
+@forward "colour" hide get-variables, create-classes;
