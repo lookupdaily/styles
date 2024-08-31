@@ -12,6 +12,7 @@
   ],
   "scripts": {
     "build": "sass src/index.scss index.css --style=compressed",
+    "start": "sass src/index.scss index.css  --watch",
     "lint": "stylelint 'src/**/*.scss' && npx prettier . --check",
     "lint:fix": "npx stylelint 'src/**/*.scss' --fix && npx prettier . --write",
     "test": "jest"
