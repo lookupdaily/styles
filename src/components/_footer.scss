@@ -1,5 +1,6 @@
 @use "../tools/colour";
 @use "../tools/spacing";
+@use "../settings/breakpoints" as *;
 
 .ld-footer {
   @include spacing.padding("small", "regular");
@@ -35,7 +36,7 @@
   }
 }
 
-@media (width >= 768px) {
+@media (width >= $small-breakpoint) {
   .ld-footer {
     &__content {
       grid-template-columns: 1fr 1fr;
