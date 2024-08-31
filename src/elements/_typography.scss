@@ -8,14 +8,14 @@ small {
 h1,
 .title {
   @include typography.text("title");
-  @include colour.colour("primary");
+  @include colour.text-colour("primary");
 
   margin-bottom: 0.625rem;
   margin-left: -0.425rem;
   padding: 0;
 
   &:hover {
-    @include colour.colour("primary-dark");
+    @include colour.text-colour("primary-dark");
   }
 }
 
@@ -26,5 +26,5 @@ h2 {
 }
 
 h4 {
-  @include colour.colour("primary");
+  @include colour.text-colour("primary");
 }

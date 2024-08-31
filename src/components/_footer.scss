@@ -20,7 +20,7 @@
   }
 
   a {
-    @include colour.colour("black");
+    @include colour.text-colour("black");
   }
 }
 

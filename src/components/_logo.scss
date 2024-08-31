@@ -2,7 +2,7 @@
 @use "../tools/typography";
 
 .ld-logo {
-  @include colour.colour("primary");
+  @include colour.text-colour("primary");
   @include typography.text("logo");
 
   &__link {
