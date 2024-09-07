@@ -1,5 +1,6 @@
 @use "../tools/colour";
 @use "../tools/typography";
 @use "accessibility";
+@use "border";
 @include colour.create-classes;
 @include typography.create-classes;
