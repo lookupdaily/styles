@@ -1,0 +1,439 @@
+@use "true" as *;
+@use "sass:map";
+@use "spacing";
+@use "../settings/spacing" as settings;
+
+$test-sizes: (
+  regular: 2rem,
+  large: 3rem,
+);
+
+@include describe("margin top mixin") {
+  @include it("sets regular margin top by default") {
+    @include assert {
+      @include output {
+        .box {
+          @include spacing.margin-top($size-settings: $test-sizes);
+        }
+      }
+
+      @include expect {
+        .box {
+          margin-top: 2rem;
+        }
+      }
+    }
+  }
+
+  @include it("uses the project settings by default") {
+    @include assert {
+      @include output {
+        .box {
+          @include spacing.margin-top;
+        }
+      }
+
+      @include expect {
+        .box {
+          margin-top: map.get($map: settings.$sizes, $key: "regular");
+        }
+      }
+    }
+  }
+
+  @include it("sets margin-top to value set against provided map key") {
+    @include assert {
+      @include output {
+        .box {
+          @include spacing.margin-top("large", $size-settings: $test-sizes);
+        }
+      }
+
+      @include expect {
+        .box {
+          margin-top: 3rem;
+        }
+      }
+    }
+  }
+
+  @include it("does not set margin top if no matching map key") {
+    @include assert {
+      @include output {
+        .box {
+          color: blue;
+
+          @include spacing.margin-top("small", $size-settings: $test-sizes);
+        }
+      }
+
+      @include expect {
+        .box {
+          color: blue;
+        }
+      }
+    }
+  }
+}
+
+@include describe("margin right mixin") {
+  @include it("sets regular margin right by default") {
+    @include assert {
+      @include output {
+        .box {
+          @include spacing.margin-right($size-settings: $test-sizes);
+        }
+      }
+
+      @include expect {
+        .box {
+          margin-right: 2rem;
+        }
+      }
+    }
+  }
+
+  @include it("sets margin-right to value set against provided map key") {
+    @include assert {
+      @include output {
+        .box {
+          @include spacing.margin-right("large", $size-settings: $test-sizes);
+        }
+      }
+
+      @include expect {
+        .box {
+          margin-right: 3rem;
+        }
+      }
+    }
+  }
+}
+
+@include describe("margin bottom mixin") {
+  @include it("sets regular margin bottom by default") {
+    @include assert {
+      @include output {
+        .box {
+          @include spacing.margin-bottom($size-settings: $test-sizes);
+        }
+      }
+
+      @include expect {
+        .box {
+          margin-bottom: 2rem;
+        }
+      }
+    }
+  }
+
+  @include it("sets margin-bottom to value set against provided map key") {
+    @include assert {
+      @include output {
+        .box {
+          @include spacing.margin-bottom("large", $size-settings: $test-sizes);
+        }
+      }
+
+      @include expect {
+        .box {
+          margin-bottom: 3rem;
+        }
+      }
+    }
+  }
+}
+
+@include describe("margin left mixin") {
+  @include it("sets regular margin left by default") {
+    @include assert {
+      @include output {
+        .box {
+          @include spacing.margin-left($size-settings: $test-sizes);
+        }
+      }
+
+      @include expect {
+        .box {
+          margin-left: 2rem;
+        }
+      }
+    }
+  }
+
+  @include it("sets margin-left to value set against provided map key") {
+    @include assert {
+      @include output {
+        .box {
+          @include spacing.margin-left("large", $size-settings: $test-sizes);
+        }
+      }
+
+      @include expect {
+        .box {
+          margin-left: 3rem;
+        }
+      }
+    }
+  }
+}
+
+@include describe("padding mixin") {
+  @include it("sets regular padding by default") {
+    @include assert {
+      @include output {
+        .box {
+          @include spacing.padding($size-settings: $test-sizes);
+        }
+      }
+
+      @include expect {
+        .box {
+          padding: 2rem;
+        }
+      }
+    }
+  }
+
+  @include it("uses the project settings by default") {
+    @include assert {
+      @include output {
+        .box {
+          @include spacing.padding;
+        }
+      }
+
+      @include expect {
+        .box {
+          padding: map.get($map: settings.$sizes, $key: "regular");
+        }
+      }
+    }
+  }
+
+  @include it("sets padding to value set against provided map key") {
+    @include assert {
+      @include output {
+        .box {
+          @include spacing.padding("large", $size-settings: $test-sizes);
+        }
+      }
+
+      @include expect {
+        .box {
+          padding: 3rem;
+        }
+      }
+    }
+  }
+
+  @include it("does not set padding if no matching map key") {
+    @include assert {
+      @include output {
+        .box {
+          color: blue;
+
+          @include spacing.padding("small", $size-settings: $test-sizes);
+        }
+      }
+
+      @include expect {
+        .box {
+          color: blue;
+        }
+      }
+    }
+  }
+
+  @include it(
+    "takes 2 size parameters to set vertical and horizontal short-hand"
+  ) {
+    @include assert {
+      @include output {
+        .box {
+          @include spacing.padding(
+            "regular",
+            "large",
+            $size-settings: $test-sizes
+          );
+        }
+      }
+
+      @include expect {
+        .box {
+          padding: 2rem 3rem;
+        }
+      }
+    }
+  }
+}
+
+@include describe("padding top mixin") {
+  @include it("sets regular padding top by default") {
+    @include assert {
+      @include output {
+        .box {
+          @include spacing.padding-top($size-settings: $test-sizes);
+        }
+      }
+
+      @include expect {
+        .box {
+          padding-top: 2rem;
+        }
+      }
+    }
+  }
+
+  @include it("uses the project settings by default") {
+    @include assert {
+      @include output {
+        .box {
+          @include spacing.padding-top;
+        }
+      }
+
+      @include expect {
+        .box {
+          padding-top: map.get($map: settings.$sizes, $key: "regular");
+        }
+      }
+    }
+  }
+
+  @include it("sets padding-top to value set against provided map key") {
+    @include assert {
+      @include output {
+        .box {
+          @include spacing.padding-top("large", $size-settings: $test-sizes);
+        }
+      }
+
+      @include expect {
+        .box {
+          padding-top: 3rem;
+        }
+      }
+    }
+  }
+
+  @include it("does not set padding top if no matching map key") {
+    @include assert {
+      @include output {
+        .box {
+          color: blue;
+
+          @include spacing.padding-top("small", $size-settings: $test-sizes);
+        }
+      }
+
+      @include expect {
+        .box {
+          color: blue;
+        }
+      }
+    }
+  }
+}
+
+@include describe("padding right mixin") {
+  @include it("sets padding margin right by default") {
+    @include assert {
+      @include output {
+        .box {
+          @include spacing.padding-right($size-settings: $test-sizes);
+        }
+      }
+
+      @include expect {
+        .box {
+          padding-right: 2rem;
+        }
+      }
+    }
+  }
+
+  @include it("sets padding-right to value set against provided map key") {
+    @include assert {
+      @include output {
+        .box {
+          @include spacing.padding-right("large", $size-settings: $test-sizes);
+        }
+      }
+
+      @include expect {
+        .box {
+          padding-right: 3rem;
+        }
+      }
+    }
+  }
+}
+
+@include describe("padding bottom mixin") {
+  @include it("sets regular padding bottom by default") {
+    @include assert {
+      @include output {
+        .box {
+          @include spacing.padding-bottom($size-settings: $test-sizes);
+        }
+      }
+
+      @include expect {
+        .box {
+          padding-bottom: 2rem;
+        }
+      }
+    }
+  }
+
+  @include it("sets padding-bottom to value set against provided map key") {
+    @include assert {
+      @include output {
+        .box {
+          @include spacing.padding-bottom("large", $size-settings: $test-sizes);
+        }
+      }
+
+      @include expect {
+        .box {
+          padding-bottom: 3rem;
+        }
+      }
+    }
+  }
+}
+
+@include describe("padding left mixin") {
+  @include it("sets regular padding left by default") {
+    @include assert {
+      @include output {
+        .box {
+          @include spacing.padding-left($size-settings: $test-sizes);
+        }
+      }
+
+      @include expect {
+        .box {
+          padding-left: 2rem;
+        }
+      }
+    }
+  }
+
+  @include it("sets padding-left to value set against provided map key") {
+    @include assert {
+      @include output {
+        .box {
+          @include spacing.padding-left("large", $size-settings: $test-sizes);
+        }
+      }
+
+      @include expect {
+        .box {
+          padding-left: 3rem;
+        }
+      }
+    }
+  }
+}
