@@ -1,10 +1,10 @@
 {
   "name": "@lookupdaily/styles",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "My style library and utilities",
   "main": "index.css",
   "files": [
-    "src/**/*",
+    "scss/**/*",
     "index.css",
     "index.css.map",
     "package.json",
