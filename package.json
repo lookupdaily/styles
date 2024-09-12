@@ -4,7 +4,7 @@
   "description": "My style library and utilities",
   "main": "index.css",
   "files": [
-    "src/**/*",
+    "scss/**/*",
     "index.css",
     "index.css.map",
     "package.json",
