@@ -8,16 +8,23 @@ This repository and package contain a set of styles that Liz Daly uses across he
 npm i @lookupdaily/styles
 ```
 
-If your project uses sass you can import all styles using
+You can import the css file into your stylesheet
 
-```scss
-@import "@lookupdaily/styles";
+```css
+@import "@lookupdaily/styles/index.css";
 ```
 
-Or individual modules
+If your project uses sass you can import all styles, or individual modules
 
 ```scss
-@import "lookupdaily/styles/colour";
+/* Import all scss modules */
+@import "@lookupdaily/styles/scss";
+
+/* Or the compiled css */
+@import "@lookupdaily/styles";
+
+/* Import individual scss modules */
+@import "lookupdaily/styles/scss/components/links";
 ```
 
 ## Styles
@@ -75,19 +82,18 @@ Alternatively use a mixin to include a colour or background colour settings in a
 
 Alternatively use a mixin to include text, font-family or font-size settings in a custom class. The parameter value for the `text()` or `font-family()` should be one of the content type names listed above, and `font-size()` should be given a size variant (lowercase). You can also pass in your own font map as an optional variable (see `settings/typography`, $fonts for the map structure).
 
-```scss
+```css
 @use "lookupdaily/styles/src as ld;
 
 .my-text {
   @include ld.text("body");
 }
 
-// Or alternatively
+/* Or alternatively */
 .my-text-2 {
   @include ld.font-family("body");
   @include ld.font-size("regular");
 }
-
 ```
 
 ## Local development
