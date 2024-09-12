@@ -1,6 +1,12 @@
 {
   "extends": ["stylelint-config-standard-scss"],
   "rules": {
-    "import-notation": "url"
+    "import-notation": "url",
+    "selector-class-pattern": [
+      "^([a-z][a-z0-9]*)((-{1,2}|_{2}|-{1-2})[a-z0-9]+)*$",
+      {
+        "message": "Expected class name to be in the BEM style"
+      }
+    ]
   }
 }
