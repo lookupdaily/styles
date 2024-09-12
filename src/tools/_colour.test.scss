@@ -15,7 +15,7 @@ $font-colours-for-backgrounds: (
     @include assert {
       @include output {
         .box {
-          @include colour.colour("primary");
+          @include colour.text-colour("primary");
         }
       }
 

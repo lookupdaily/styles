@@ -1,11 +1,3 @@
-@use "../settings/typography" as variables;
-@use "url-builder";
-
-$body-url: url-builder.google-font(variables.$google-body-font);
-$title-url: url-builder.google-font(variables.$google-title-font);
-$logo-url: url-builder.google-font(variables.$google-logo-font);
-
+@use "../../node_modules/normalize.css/normalize";
 @import url("https://fonts.googleapis.com/icon?family=Material+Icons");
-@import url($body-url);
-@import url($title-url);
-@import url($logo-url);
+@import url("https://fonts.googleapis.com/css2?family=Alice&family=Montserrat:ital,wght@0,500;1,500&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap");

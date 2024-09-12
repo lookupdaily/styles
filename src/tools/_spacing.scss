@@ -1,0 +1,74 @@
+@use "../settings/spacing";
+@use "sass:map";
+
+@mixin padding(
+  $size-name: "regular",
+  $horizontal: null,
+  $size-settings: spacing.$sizes
+) {
+  $spacing: null;
+  $vertical-spacing: get($size-name, $size-settings);
+
+  @if $horizontal {
+    $horizontal-spacing: get($horizontal, $size-settings);
+    $spacing: $vertical-spacing $horizontal-spacing;
+  }
+
+  @if not $spacing {
+    $spacing: $vertical-spacing;
+  }
+
+  padding: $spacing;
+}
+
+@mixin padding-top($size-name: "regular", $size-settings: spacing.$sizes) {
+  $spacing: get($size-name, $size-settings);
+
+  padding-top: $spacing;
+}
+
+@mixin padding-bottom($size-name: "regular", $size-settings: spacing.$sizes) {
+  $spacing: get($size-name, $size-settings);
+
+  padding-bottom: $spacing;
+}
+
+@mixin padding-right($size-name: "regular", $size-settings: spacing.$sizes) {
+  $spacing: get($size-name, $size-settings);
+
+  padding-right: $spacing;
+}
+
+@mixin padding-left($size-name: "regular", $size-settings: spacing.$sizes) {
+  $spacing: get($size-name, $size-settings);
+
+  padding-left: $spacing;
+}
+
+@mixin margin-top($size-name: "regular", $size-settings: spacing.$sizes) {
+  $spacing: get($size-name, $size-settings);
+
+  margin-top: $spacing;
+}
+
+@mixin margin-bottom($size-name: "regular", $size-settings: spacing.$sizes) {
+  $spacing: get($size-name, $size-settings);
+
+  margin-bottom: $spacing;
+}
+
+@mixin margin-right($size-name: "regular", $size-settings: spacing.$sizes) {
+  $spacing: get($size-name, $size-settings);
+
+  margin-right: $spacing;
+}
+
+@mixin margin-left($size-name: "regular", $size-settings: spacing.$sizes) {
+  $spacing: get($size-name, $size-settings);
+
+  margin-left: $spacing;
+}
+
+@function get($size-name, $size-settings: spacing.$sizes) {
+  @return map.get($size-settings, $size-name);
+}

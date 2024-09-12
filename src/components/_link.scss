@@ -1,0 +1,63 @@
+@use "../tools/colour";
+
+/* Link Styles */
+
+.ld-link {
+  @include colour.text-colour("primary");
+
+  padding: 0 0.3rem;
+  margin: 0 -0.3rem;
+  border-radius: 2px;
+
+  &.arrow {
+    display: inline-flex;
+    align-items: center;
+  }
+
+  a {
+    padding: 0;
+  }
+
+  &:visited,
+  a:visited {
+    @include colour.text-colour("primary");
+  }
+
+  &:hover,
+  &:focus {
+    @include colour.background-colour("primary");
+
+    a {
+      background-color: transparent;
+      color: inherit;
+    }
+  }
+
+  &[data-state="active"] {
+    border-bottom: 3px solid var(--ld-colour-secondary);
+    text-decoration: none;
+    font-weight: 500;
+
+    &:hover {
+      @include colour.text-colour("primary");
+
+      background-color: transparent;
+      cursor: default;
+    }
+  }
+
+  &--hover-secondary,
+  &--hover-secondary:visited {
+    @include colour.text-colour("black");
+  }
+
+  &--hover-secondary:hover,
+  &--hover-secondary:focus {
+    @include colour.background-colour("secondary");
+  }
+
+  &--hover-underline:hover {
+    background-color: transparent;
+    border-bottom: 3px solid var(--ld-colour-secondary);
+  }
+}

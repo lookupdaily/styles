@@ -2,7 +2,7 @@
 @use "create-variables";
 @use "../settings";
 
-@mixin colour($colour) {
+@mixin text-colour($colour) {
   color: var(--ld-colour-#{$colour});
 }
 

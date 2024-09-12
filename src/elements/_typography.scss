@@ -1,0 +1,30 @@
+@use "../tools/typography";
+@use "../tools/colour";
+
+small {
+  @include typography.font-size("small");
+}
+
+h1,
+.title {
+  @include typography.text("title");
+  @include colour.text-colour("primary");
+
+  margin-bottom: 0.625rem;
+  margin-left: -0.425rem;
+  padding: 0;
+
+  &:hover {
+    @include colour.text-colour("primary-dark");
+  }
+}
+
+h2 {
+  @include typography.font-size("x-large");
+
+  font-weight: 300;
+}
+
+h4 {
+  @include colour.text-colour("primary");
+}

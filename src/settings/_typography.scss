@@ -4,29 +4,11 @@ $body-font: "Open Sans";
 $title-font: "Alice";
 $logo-font: "Montserrat";
 $icon-font: "Material Icons";
-$google-body-font: (
-  family: $body-font,
-  weights: (
-    500,
-    700,
-  ),
-);
-$google-title-font: (
-  family: $title-font,
-  weights: (
-    400,
-  ),
-);
-$google-logo-font: (
-  family: $logo-font,
-  weights: (
-    500,
-  ),
-);
 $font-sizes: (
   small: 1rem,
   regular: 1.1875rem,
   large: 1.5rem,
+  larger: 1.7813rem,
   x-large: 2.25rem,
   xx-large: 4.5rem,
 ) !default;
@@ -36,7 +18,7 @@ $fonts: (
       $body-font,
       sans-serif,
     ),
-    weight: 500,
+    weight: 400,
     size: "regular",
   ),
   title: (
@@ -60,8 +42,8 @@ $fonts: (
       $body-font,
       sans-serif,
     ),
-    weight: 500,
-    size: "large",
+    weight: 400,
+    size: "larger",
   ),
 ) !default;
 $icon-fonts: (
