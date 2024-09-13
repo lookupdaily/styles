@@ -1,4 +1,5 @@
 /node_modules/
+/coverage
 
 # Am packaging built files in the root of the directory, but don't want to commit them
 index.css
