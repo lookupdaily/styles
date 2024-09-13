@@ -104,7 +104,7 @@ function getExampleDom() {
     </nav>
     <a href="/another">Another link</a>
   `;
-	require("./menu");
+	require("./header");
 	return document;
 }
 
