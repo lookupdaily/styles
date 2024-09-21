@@ -1,5 +1,5 @@
-import { getElement } from "../../utilities/getElement";
-import { getModule } from "../../utilities/getModule";
+import { getElement } from "../../tools/getElement";
+import { getModule } from "../../tools/getModule";
 import headerConfig from "./header.json";
 
 export class Header {

@@ -1,1 +1,1 @@
-export { Header } from "./components/header/header";
+export { Header, type HeaderConfig } from "./components/header/header";
