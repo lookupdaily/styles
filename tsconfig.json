@@ -22,8 +22,7 @@
 		"lib": ["es2022", "dom", "dom.iterable"],
 		"types": []
 	},
-	"files": ["src/index.ts"],
 	// Include the necessary files for your project
-	"include": ["**/*.ts", "src/**/*.json"],
+	"include": ["src/**/*.ts", "src/**/*.json"],
 	"exclude": ["node_modules", "**/*/*.spec.ts", "dist/"]
 }
