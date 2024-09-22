@@ -9,9 +9,9 @@
 		"./header.js": "./dist/components/header/header.js",
 		"./scss/index.scss": "./dist/index.scss"
 	},
-	"files": ["dist/", "package.json", "README.md"],
+	"files": ["dist/", "package.json", "README.md", "index.css", "index.css.map"],
 	"scripts": {
-		"build:scss": "sass scss/index.scss dist/index.css --style=compressed & npx gulp",
+		"build:scss": "sass scss/index.scss index.css --style=compressed & npx gulp",
 		"build:typescript": "npx tsc",
 		"build": "npm run build:scss & npm run build:typescript",
 		"start:scss": "sass scss/index.scss index.css --watch  & npx gulp",
