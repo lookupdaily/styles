@@ -2,9 +2,13 @@
 	"name": "@lookupdaily/styles",
 	"version": "1.0.4",
 	"description": "My style library and utilities",
-	"main": "dist/index.js",
+	"main": "dist/index.css",
 	"sass": "dist/index.scss",
 	"css": "dist/index.css",
+	"exports": {
+		"./header.js": "./dist/components/header/header.js",
+		"./scss/index.scss": "./dist/index.scss"
+	},
 	"files": ["dist/", "package.json", "README.md"],
 	"scripts": {
 		"build:scss": "sass scss/index.scss dist/index.css --style=compressed & npx gulp",
