@@ -1,11 +1,18 @@
 {
 	"$schema": "https://biomejs.dev/schemas/1.5.3/schema.json",
+	"files": {
+		"ignore": ["normalize.css"]
+	},
 	"linter": {
 		"enabled": true,
 		"rules": {
 			"all": true,
 			"nursery": {
 				"all": false
+			},
+			"correctness": {
+				"noNodejsModules": "off",
+				"useImportExtensions": "off"
 			}
 		}
 	},
@@ -20,6 +27,7 @@
 	"javascript": {
 		"globals": [
 			"it",
+			"test",
 			"describe",
 			"expect",
 			"jest",
