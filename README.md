@@ -2,6 +2,19 @@
 
 This repository and package contain a set of styles that Liz Daly uses across her personal projects. It is built with sass.
 
+- [@lookupdaily styles](#lookupdaily-styles)
+  - [Install](#install)
+  - [Styles](#styles)
+    - [Colour](#colour)
+    - [Typography](#typography)
+      - [Content types](#content-types)
+      - [Sizes](#sizes)
+  - [Components](#components)
+    - [Header](#header)
+  - [Local development](#local-development)
+    - [Requirements](#requirements)
+    - [Getting started](#getting-started)
+
 ## Install
 
 ```bash
@@ -94,6 +107,68 @@ Alternatively use a mixin to include text, font-family or font-size settings in 
   @include ld.font-family("body");
   @include ld.font-size("regular");
 }
+```
+
+## Components
+
+### Header 
+
+Should contain a logo or site title and a series of navigational links. These links will be visible in the header on larger screens, and contained in an expandable menu on smaller screens. JavaScript is required for this component, and should be setup in your client-side JavaScript.
+
+Active links are styled using the `data-state="active"` attribute.
+
+The header should contain a skip to content link as the first element.
+
+Example: 
+
+```html
+<header class="ld-header {% if pageType == 'home' %}home{% endif %}" data-module="ld-header">
+  <div class="visually-hidden"><a href="#content">Skip to content</a></div>
+  <div class="ld-logo"><a href="/" class="ld-logo__link">{ logo }</a></div>
+  <span hidden id="menu-label">Main menu</span>
+  <button class="ld-header__menu-button" id="ld-menu-button" aria-expanded="false">
+    <span class="ld-header__menu-button-text">Menu</span>
+  </button>
+  <nav class="ld-header-nav" id="ld-menu" aria-labelledy="menu-label">
+    <ul class="ld-header-nav__list">
+      <li class="ld-header-nav__item">
+        <a class="ld-link ld-header-nav__link" href="/" data-state="active">
+          <span class="nav__link__text">Home</span>
+        </a>
+      </li>
+    <li class="ld-header-nav__item">
+      <a class="ld-link ld-header-nav__link" href="/about"><span class="nav__link__text">About</span></a>
+    </li>
+    </ul>
+  </nav>
+</header>
+```
+
+Setup in JavaScript:
+
+```javascript
+import { Header } from "@lookupdaily/styles/header.js"
+
+document.addEventListener("DOMContentLoaded", () => {
+  Header.init();
+})
+```
+
+The Header component looks for an element with the `data-module` attribute with a value of `ld-header` (`data-module="ld-header"`), so this must be included in the html. You can customize the data-module value and menu and button ids by passing in a custom config:
+
+```javascript
+import { Header } from "@lookupdaily/styles/header.js"
+
+const config = {
+	moduleName: 'my-module';
+	buttonId: 'my-button';
+	menuId: 'menu';
+	expandedClassName: 'expanded';
+}
+
+document.addEventListener("DOMContentLoaded", () => {
+  Header.init(config);
+})
 ```
 
 ## Local development
