@@ -1,0 +1,29 @@
+{
+  "compilerOptions": {
+    // Base Options recommended for all projects
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "target": "es2022",
+    "allowJs": true,
+    "resolveJsonModule": true,
+    "moduleDetection": "force",
+    "isolatedModules": true,
+    // "verbatimModuleSyntax": true,
+    // Enable strict type checking so you can catch bugs early
+    "strict": true,
+    "noUncheckedIndexedAccess": true,
+    "noImplicitOverride": true,
+    // Transpile our TypeScript code to JavaScript
+    "module": "NodeNext",
+    "outDir": "dist",
+    // Emit type declarations
+    "declaration": true,
+    // Include the DOM types
+    "lib": ["es2022", "dom", "dom.iterable"],
+    "types": []
+  },
+  "files": ["src/index.ts"],
+  // Include the necessary files for your project
+  "include": ["**/*.ts", "src/**/*.json"],
+  "exclude": ["node_modules", "**/*/*.spec.ts", "dist/"]
+}

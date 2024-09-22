@@ -2,17 +2,21 @@
   "name": "@lookupdaily/styles",
   "version": "1.0.4",
   "description": "My style library and utilities",
-  "main": "index.css",
+  "main": "dist/index.js",
+  "sass": "dist/index.scss",
+  "css": "dist/index.css",
   "files": [
-    "scss/**/*",
-    "index.css",
-    "index.css.map",
+    "dist/",
     "package.json",
     "README.md"
   ],
   "scripts": {
-    "build": "sass scss/index.scss index.css --style=compressed",
-    "start": "sass scss/index.scss index.css  --watch",
+    "build:scss": "sass scss/index.scss dist/index.css --style=compressed",
+    "build:typescript": "npx tsc & webpack --mode production",
+    "build": "npm run build:scss & npm run build:typescript",
+    "start:scss": "sass scss/index.scss index.css  --watch",
+    "start:typescript": "npx tsc --watch & webpack --watch --mode development",
+    "start": "npm run start:scss & npm run start:typescript",
     "lint": "stylelint 'scss/**/*.scss' && npx prettier . --check",
     "lint:fix": "npx stylelint 'scss/**/*.scss' --fix && npx prettier . --write",
     "test": "jest"
@@ -20,12 +24,29 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "@babel/core": "^7.25.2",
+    "@babel/preset-env": "^7.25.4",
+    "@babel/preset-typescript": "^7.24.7",
+    "@testing-library/dom": "^10.4.0",
+    "@testing-library/jest-dom": "^6.5.0",
+    "@testing-library/user-event": "^14.5.2",
+    "@types/jest": "^29.5.13",
+    "babel-jest": "^29.7.0",
+    "babel-loader": "^9.2.1",
     "glob": "^11.0.0",
     "jest": "^29.7.0",
+    "jest-environment-jsdom": "^29.7.0",
     "prettier": "^3.3.3",
     "sass": "^1.77.8",
     "sass-true": "^8.0.0",
     "stylelint": "^16.8.1",
-    "stylelint-config-standard-scss": "^13.1.0"
+    "stylelint-config-standard-scss": "^13.1.0",
+    "ts-loader": "^9.5.1",
+    "typescript": "^5.6.2",
+    "webpack": "^5.94.0",
+    "webpack-cli": "^5.1.4"
+  },
+  "dependencies": {
+    "copy-webpack-plugin": "^12.0.2"
   }
 }
