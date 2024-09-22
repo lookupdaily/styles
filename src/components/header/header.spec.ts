@@ -21,8 +21,8 @@ describe("menu", () => {
 
 	beforeEach(() => {
 		const container = getExampleDom();
-		const header = container.querySelector("header")!;
-		var component = new Header(header, config);
+		const header = container.querySelector("header") as HTMLElement;
+		const component = new Header(header, config);
 		component.init();
 		locators = new Locators(header);
 		user = userEvent.setup();

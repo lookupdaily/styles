@@ -14,8 +14,7 @@ describe("getElement", () => {
 	});
 
 	it("returns as non-nullable type", () => {
-		let element: Element | null;
-		element = document.createElement("div");
+		const element: Element | null = document.createElement("div");
 
 		const result = getOrThrowIfNull(element);
 		expect(result).toBe(element);

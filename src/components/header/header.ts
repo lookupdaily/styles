@@ -3,15 +3,14 @@ import { getModule } from "../../tools/getModule";
 import headerConfig from "./header.json";
 
 export class Header {
-	private menu: HTMLElement;
-	private menuButton: HTMLElement;
+	private readonly config: HeaderConfig;
+	private readonly menu: HTMLElement;
+	private readonly menuButton: HTMLElement;
 	private focusableEls: HTMLElement[] = [];
 	private lastFocusableEl!: HTMLElement;
 
-	constructor(
-		readonly module: HTMLElement,
-		readonly config: HeaderConfig,
-	) {
+	constructor(module: HTMLElement, config: HeaderConfig) {
+		this.config = config;
 		this.menu = getElement(module, config.menuId);
 		this.menuButton = getElement(module, config.buttonId);
 	}
