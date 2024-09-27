@@ -119,6 +119,8 @@ Active links are styled using the `data-state="active"` attribute.
 
 The header should contain a skip to content link as the first element.
 
+The header should contain no more than 4 links.
+
 Example: 
 
 ```html
