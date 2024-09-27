@@ -21,7 +21,7 @@
 		"start:typescript": "npx tsc --watch",
 		"start": "npm run start:scss & npm run start:typescript",
 		"lint:css": "stylelint 'scss/**/*.scss'",
-		"lint:css:fix": "npx stylelint 'scss/**/*.scss'",
+		"lint:css:fix": "npx stylelint 'scss/**/*.scss' --fix",
 		"lint:js": "npx @biomejs/biome ci .",
 		"lint:js:fix": "npx @biomejs/biome check --write .",
 		"lint": "npm run lint:css && npm run lint:js",
