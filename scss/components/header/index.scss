@@ -104,7 +104,6 @@
 
       &__list {
         flex-direction: column;
-        width: 100%;
         align-items: stretch;
         padding: 0;
       }
@@ -116,7 +115,6 @@
         justify-content: center;
         align-items: center;
         border-bottom: 1px solid var(--ld-colour-primary);
-        width: 100%;
       }
 
       &__link {
