@@ -113,7 +113,7 @@ Alternatively use a mixin to include text, font-family or font-size settings in 
 
 ### Header 
 
-Should contain a logo or site title and a series of navigational links. These links will be visible in the header on larger screens, and contained in an expandable menu on smaller screens. JavaScript is required for this component, and should be setup in your client-side JavaScript.
+Should contain a logo or site title and a series of navigational links. These links will be visible in the header on larger screens, and contained in an expandable menu on smaller screens. JavaScript is used for this component, and should be setup in your client-side JavaScript. But there is a fallback for if JavaScript is not enabled in the user's browser.
 
 Active links are styled using the `data-state="active"` attribute.
 
