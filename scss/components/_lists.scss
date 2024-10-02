@@ -1,6 +1,4 @@
-@use "../tools/colour";
 @use "../tools/spacing";
-@use "../tools/typography";
 @use "../settings/breakpoints" as *;
 
 /* List styles */
@@ -15,10 +13,6 @@
 
     margin-left: 0;
   }
-
-  .ld-descriptive-list__gap {
-    display: none;
-  }
 }
 
 .ld-list {
@@ -28,22 +22,7 @@
 @media (width >= $small-breakpoint) {
   .ld-descriptive-list {
     display: grid;
-    grid-template-columns: max-content max-content auto;
-    gap: spacing.get("small");
-
-    .ld-descriptive-list__gap {
-      @include spacing.margin-right("small");
-      @include typography.font-size("large");
-      @include colour.text-colour("secondary");
-
-      font-family: "Material Icons", Arial, Helvetica, sans-serif;
-      font-weight: normal;
-      font-style: normal;
-      display: inline-block;
-      text-transform: none;
-      letter-spacing: normal;
-      word-wrap: normal;
-      white-space: nowrap;
-    }
+    grid-template-columns: max-content auto;
+    gap: spacing.get("large");
   }
 }
