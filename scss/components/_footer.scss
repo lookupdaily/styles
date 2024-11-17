@@ -26,8 +26,6 @@
 }
 
 .ld-social-links {
-  @include spacing.margin-bottom("small");
-
   display: flex;
   flex-direction: column;
 
