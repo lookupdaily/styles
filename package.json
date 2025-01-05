@@ -1,11 +1,12 @@
 {
 	"name": "@lookupdaily/styles",
-	"version": "2.0.1",
+	"version": "2.0.2",
 	"description": "My style library and utilities",
 	"main": "dist/index.css",
 	"sass": "dist/index.scss",
 	"css": "dist/index.css",
 	"exports": {
+		".": "./index.css",
 		"./header": "./dist/components/header/header.js",
 		"./header.js": "./dist/components/header/header.js",
 		"./scss/": "./dist/index.scss",
