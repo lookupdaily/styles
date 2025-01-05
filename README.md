@@ -138,7 +138,7 @@ Example:
   <button class="ld-header__menu-button" id="ld-menu-button" aria-expanded="false">
     <span class="ld-header__menu-button-text">Menu</span>
   </button>
-  <nav class="ld-header-nav" id="ld-menu" aria-labelledy="menu-label">
+  <nav class="ld-header-nav" id="ld-menu" aria-labelledby="menu-label">
     <ul class="ld-header-nav__list">
       <li class="ld-header-nav__item">
         <a class="ld-link ld-header-nav__link" href="/" data-state="active">
