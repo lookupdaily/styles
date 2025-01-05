@@ -12,7 +12,10 @@
 		"./header.js": "./dist/components/header/header.js",
 		"./scss": "./dist/index.scss",
 		"./scss/components": "./dist/components/index.scss",
-		"./scss/components/header": "./dist/components/header/_header.scss"
+		"./scss/components/header": "./dist/components/header/_header.scss",
+		"./sass": "./dist/index.scss",
+		"./sass/components": "./dist/components/index.scss",
+		"./sass/components/header": "./dist/components/header/_header.scss"
 	},
 	"files": ["dist/", "package.json", "README.md", "index.css", "index.css.map"],
 	"scripts": {
