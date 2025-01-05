@@ -5,6 +5,7 @@
 	},
 	"linter": {
 		"enabled": true,
+		"ignore": ["jest.config.js"],
 		"rules": {
 			"all": true,
 			"nursery": {
