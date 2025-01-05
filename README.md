@@ -24,20 +24,27 @@ npm i @lookupdaily/styles
 You can import the css file into your stylesheet
 
 ```css
-@import "@lookupdaily/styles/index.css";
+@import "@lookupdaily/styles";
 ```
 
 If your project uses sass you can import all styles, or individual modules
 
 ```scss
 /* Import all scss modules */
-@import "@lookupdaily/styles/scss";
+@use "@lookupdaily/styles/scss";
 
 /* Or the compiled css */
-@import "@lookupdaily/styles";
+@use "@lookupdaily/styles";
 
 /* Import individual scss modules */
-@import "lookupdaily/styles/scss/components/links";
+@use "lookupdaily/styles/scss/components/links";
+
+/* Import all scss modules and use mixins */
+@use "lookupdaily/styles/scss" as ld;
+
+.component {
+  @include ld.padding-top("small");
+}
 ```
 
 ## Styles
