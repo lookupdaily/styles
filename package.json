@@ -6,6 +6,7 @@
 	"sass": "dist/index.scss",
 	"css": "dist/index.css",
 	"exports": {
+		".": "./index.css",
 		"./header": "./dist/components/header/header.js",
 		"./header.js": "./dist/components/header/header.js",
 		"./scss/": "./dist/index.scss",
