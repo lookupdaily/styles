@@ -1,4 +1,4 @@
-import { getOrThrowIfNull } from "./getOrThrowIfNull";
+import { getOrThrowIfNull } from "./getOrThrowIfNull.js";
 
 export function getElement<T extends Element>(
 	parent: HTMLElement,

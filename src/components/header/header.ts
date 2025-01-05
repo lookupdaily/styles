@@ -1,5 +1,5 @@
-import { getElement } from "../../tools/getElement";
-import { getModule } from "../../tools/getModule";
+import { getElement } from "../../tools/getElement.js";
+import { getModule } from "../../tools/getModule.js";
 import { type HeaderConfig, defaultConfig } from "./header-config.js";
 
 export class Header {

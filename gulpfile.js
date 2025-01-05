@@ -1,4 +1,4 @@
-const gulp = require("gulp");
+import gulp from "gulp";
 
 const paths = {
 	pages: ["scss/**/*", "!scss/**/*.test.scss"],

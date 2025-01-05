@@ -4,7 +4,7 @@
 
 import { getAllByRole, getByRole } from "@testing-library/dom";
 import userEvent, { type UserEvent } from "@testing-library/user-event";
-import { Header } from "./header";
+import { Header } from "./header.js";
 import "@testing-library/jest-dom";
 import "@testing-library/jest-dom/jest-globals";
 

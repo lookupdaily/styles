@@ -1,4 +1,4 @@
-import { getOrThrowIfNull } from "./getOrThrowIfNull";
+import { getOrThrowIfNull } from "./getOrThrowIfNull.js";
 
 export function getModule(parent: Document, moduleName: string): HTMLElement {
 	const element = parent.querySelector(`[data-module="${moduleName}"]`);

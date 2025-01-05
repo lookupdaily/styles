@@ -2,7 +2,7 @@
  * @jest-environment jsdom
  */
 
-import { getModule } from "./getModule";
+import { getModule } from "./getModule.js";
 
 describe("getModule", () => {
 	afterEach(() => {
