@@ -20,7 +20,7 @@
 		"declaration": true,
 		// Include the DOM types
 		"lib": ["es2022", "dom", "dom.iterable"],
-		"types": []
+		"types": ["jest"]
 	},
 	// Include the necessary files for your project
 	"include": ["src/**/*.ts", "src/**/*.json"],

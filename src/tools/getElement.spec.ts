@@ -4,7 +4,7 @@
 
 import "@testing-library/jest-dom";
 import "@testing-library/jest-dom/jest-globals";
-import { getElement } from "./getElement";
+import { getElement } from "./getElement.js";
 
 describe("getElement", () => {
 	it("finds the element", () => {

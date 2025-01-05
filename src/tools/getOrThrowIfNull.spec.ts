@@ -1,4 +1,4 @@
-import { getOrThrowIfNull } from "./getOrThrowIfNull";
+import { getOrThrowIfNull } from "./getOrThrowIfNull.js";
 
 describe("getElement", () => {
 	afterEach(() => {

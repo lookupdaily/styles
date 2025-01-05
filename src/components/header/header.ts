@@ -1,6 +1,6 @@
-import { getElement } from "../../tools/getElement";
-import { getModule } from "../../tools/getModule";
-import headerConfig from "./header.json";
+import { getElement } from "../../tools/getElement.js";
+import { getModule } from "../../tools/getModule.js";
+import { type HeaderConfig, defaultConfig } from "./header-config.js";
 
 export class Header {
 	private readonly config: HeaderConfig;
@@ -54,16 +54,9 @@ export class Header {
 		}
 	}
 
-	static init(config: HeaderConfig = headerConfig): void {
+	static init(config: HeaderConfig = defaultConfig): void {
 		const headerElement = getModule(document, config.moduleName);
 		const header = new Header(headerElement, config);
 		header.init();
 	}
-}
-
-export interface HeaderConfig {
-	moduleName: string;
-	buttonId: string;
-	menuId: string;
-	expandedClassName: string;
 }
