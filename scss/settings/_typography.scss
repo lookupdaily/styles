@@ -1,12 +1,12 @@
 @use "sass:map";
 
-$body-font: "Open Sans";
-$title-font: "Alice";
-$logo-font: "Montserrat";
-$icon-font: "Material Icons";
+$body-font: "-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica, Arial";
+$title-font: "Charter, Bitstream Charter";
+$logo-font: "Courier new";
+$icon-font: "Material Icons, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica, Arial";
 $font-sizes: (
   small: 1rem,
-  regular: 1.1875rem,
+  regular: 1.3rem,
   large: 1.5rem,
   larger: 1.7813rem,
   x-large: 2.25rem,
@@ -18,7 +18,7 @@ $fonts: (
       $body-font,
       sans-serif,
     ),
-    weight: 400,
+    weight: 300,
     size: "regular",
   ),
   title: (
@@ -31,15 +31,15 @@ $fonts: (
   ),
   logo: (
     family: (
-      $logo-font,
+      $body-font,
       sans-serif,
     ),
-    weight: 500,
-    size: "large",
+    weight: 400,
+    size: "larger",
   ),
   subtitle: (
     family: (
-      $body-font,
+      $title-font,
       sans-serif,
     ),
     weight: 400,
