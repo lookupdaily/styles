@@ -20,9 +20,14 @@ h1,
 }
 
 h2 {
+  @include typography.font-family("title");
   @include typography.font-size("x-large");
 
   font-weight: 300;
+}
+
+h3 {
+  font-weight: 500;
 }
 
 h4 {
