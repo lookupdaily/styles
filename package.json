@@ -19,9 +19,9 @@
 	},
 	"files": ["dist/", "package.json", "README.md", "index.css", "index.css.map"],
 	"scripts": {
-		"build:scss": "sass scss/index.scss index.css --style=compressed & npx gulp",
+		"build:scss": "sass scss/index.scss index.css --style=compressed && npx gulp",
 		"build:typescript": "npx tsc",
-		"build": "npm run build:scss & npm run build:typescript",
+		"build": "npm run build:scss && npm run build:typescript",
 		"start:scss": "sass scss/index.scss index.css --watch  & npx gulp",
 		"start:typescript": "npx tsc --watch",
 		"start": "npm run start:scss & npm run start:typescript",
