@@ -3,7 +3,6 @@
 $body-font: "-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica, Arial";
 $title-font: "Charter, Bitstream Charter";
 $logo-font: "Courier new";
-$icon-font: "Material Icons, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica, Arial";
 $font-sizes: (
   small: 1rem,
   regular: 1.3rem,
@@ -44,19 +43,5 @@ $fonts: (
     ),
     weight: 400,
     size: "larger",
-  ),
-) !default;
-$icon-fonts: (
-  sm: (
-    family: $icon-font,
-    size: 1.125rem,
-  ),
-  md: (
-    family: $icon-font,
-    size: 1.5rem,
-  ),
-  lg: (
-    family: $icon-font,
-    size: 2.25rem,
   ),
 ) !default;
