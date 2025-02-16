@@ -3,7 +3,7 @@
 
 /* List styles */
 
-.ld-descriptive-list {
+.ld-descriptive-list, .ld-md dl  {
   dt {
     font-weight: 500;
   }
@@ -20,7 +20,7 @@
 }
 
 @media (width >= $small-breakpoint) {
-  .ld-descriptive-list {
+  .ld-descriptive-list, .ld-md dl {
     display: grid;
     grid-template-columns: max-content auto;
     gap: spacing.get("large");

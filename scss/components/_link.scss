@@ -2,7 +2,7 @@
 
 /* Link Styles */
 
-.ld-link {
+.ld-link, .ld-md a {
   @include colour.text-colour("primary");
 
   padding: 0 0.3rem 0.12rem;
@@ -14,23 +14,13 @@
     align-items: center;
   }
 
-  a {
-    padding: 0;
-  }
-
-  &:visited,
-  a:visited {
+  &:visited {
     @include colour.text-colour("primary");
   }
 
   &:hover,
   &:focus {
     @include colour.background-colour("primary");
-
-    a {
-      background-color: transparent;
-      color: inherit;
-    }
   }
 
   &[data-state="active"] {
@@ -59,5 +49,23 @@
   &--hover-underline:hover {
     background-color: transparent;
     border-bottom: 3px solid var(--ld-colour-secondary);
+  }
+}
+
+.ld-link{
+  a {
+    padding: 0;
+  }
+
+  &:hover,
+  &:focus {
+    a {
+      background-color: transparent;
+      color: inherit;
+    }
+  }
+
+  a:visited {
+    @include colour.text-colour("primary");
   }
 }
