@@ -1,3 +1,5 @@
+@use "../tools/border";
+
 .ld-border-top--secondary {
-  border-top: 5px solid var(--ld-colour-secondary);
+  @include border.border-top;
 }

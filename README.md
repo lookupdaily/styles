@@ -50,6 +50,8 @@ If your project uses sass you can import all styles, or individual modules
 
 ## Styles
 
+Styles are written in the [BEM pattern](https://getbem.com/naming/) and applied using classes, but can also be applied directly to relevant html elements (without the need for classes) by wrapping a page in the class `ld-md`. This is designed for use with markdown templates where elements will not be individually styled with classes.  
+
 ### Colour
 
 Colours are available via global css-variables or utility classes

@@ -1,0 +1,7 @@
+@mixin border-top($width: 5px) {
+  border-top: $width solid var(--ld-colour-secondary);
+}
+
+@mixin border($width: 2.5px) {
+  border: $width solid var(--ld-colour-secondary);
+}

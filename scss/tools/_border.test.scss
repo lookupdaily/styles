@@ -1,0 +1,70 @@
+@use "true" as *;
+@use "border";
+
+@include describe("border mixin") {
+  @include it("sets border to default width") {
+    @include assert {
+      @include output {
+        .box {
+          @include border.border;
+        }
+      }
+
+      @include expect {
+        .box {
+          border: 2.5px solid var(--ld-colour-secondary);
+        }
+      }
+    }
+  }
+
+  @include it("sets border to provided width") {
+    @include assert {
+      @include output {
+        .box {
+          @include border.border(3px);
+        }
+      }
+
+      @include expect {
+        .box {
+          border: 3px solid var(--ld-colour-secondary);
+        }
+      }
+    }
+  }
+}
+
+@include describe("border top mixin") {
+  @include it("sets border top to default width") {
+    @include assert {
+      @include output {
+        .box {
+          @include border.border-top;
+        }
+      }
+
+      @include expect {
+        .box {
+          border-top: 5px solid var(--ld-colour-secondary);
+        }
+      }
+    }
+  }
+
+  @include it("sets border to provided width") {
+    @include assert {
+      @include output {
+        .box {
+          @include border.border-top(3px);
+        }
+      }
+
+      @include expect {
+        .box {
+          border-top: 3px solid var(--ld-colour-secondary);
+        }
+      }
+    }
+  }
+}

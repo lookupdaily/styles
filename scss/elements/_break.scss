@@ -1,0 +1,8 @@
+@use "../tools/border";
+@use "../tools/spacing";
+
+.ld-break, .ld-md hr {
+  @include border.border;
+  @include spacing.margin-bottom("x-large");
+  @include spacing.margin-top("x-large");
+}
