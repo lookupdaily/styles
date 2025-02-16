@@ -11,6 +11,7 @@ This repository and package contain a set of styles that Liz Daly uses across he
       - [Sizes](#sizes)
   - [Components](#components)
     - [Header](#header)
+    - [Footer](#footer)
   - [Local development](#local-development)
     - [Requirements](#requirements)
     - [Getting started](#getting-started)
@@ -131,7 +132,7 @@ The header should contain no more than 4 links.
 Example: 
 
 ```html
-<header class="ld-header {% if pageType == 'home' %}home{% endif %}" data-module="ld-header">
+<header class="ld-header data-module="ld-header">
   <div class="visually-hidden"><a href="#content">Skip to content</a></div>
   <div class="ld-logo"><a href="/" class="ld-logo__link">{ logo }</a></div>
   <span hidden id="menu-label">Main menu</span>
@@ -178,6 +179,48 @@ const config = {
 document.addEventListener("DOMContentLoaded", () => {
   Header.init(config);
 })
+```
+
+### Footer
+
+Content can be across one or two columns, against secondary colour background. On smaller screens there will always be one column.
+
+For one column, set content directly in the footer class:
+
+```html
+<footer class="ld-footer">
+  <p>Footer content</p>
+</footer>
+```
+
+For two, add `__content` class containing two elements only:
+
+```html
+<footer class="ld-footer">
+  <div class="ld-footer__content">
+    <p>
+      Left column
+    </p>
+    <p>
+      Right column
+    </p>
+  </div>
+</footer>
+```
+
+To align items to the left and right edges add `__item--justify-outside` to each element:
+
+```html
+<footer class="ld-footer">
+  <div class="ld-footer__content">
+    <p class="ld-footer__item--justify-outside">
+      Left-aligned content
+    </p>
+    <p class="ld-footer__item--justify-outside">
+      Right-aligned content
+    </p>
+  </div>
+</footer>
 ```
 
 ## Local development
