@@ -132,7 +132,7 @@ The header should contain no more than 4 links.
 Example: 
 
 ```html
-<header class="ld-header {% if pageType == 'home' %}home{% endif %}" data-module="ld-header">
+<header class="ld-header data-module="ld-header">
   <div class="visually-hidden"><a href="#content">Skip to content</a></div>
   <div class="ld-logo"><a href="/" class="ld-logo__link">{ logo }</a></div>
   <span hidden id="menu-label">Main menu</span>
