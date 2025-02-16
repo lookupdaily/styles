@@ -57,15 +57,15 @@
     padding: 0;
   }
 
+  a:visited {
+    @include colour.text-colour("primary");
+  }
+
   &:hover,
   &:focus {
     a {
       background-color: transparent;
       color: inherit;
     }
-  }
-
-  a:visited {
-    @include colour.text-colour("primary");
   }
 }
