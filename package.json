@@ -1,6 +1,6 @@
 {
 	"name": "@lookupdaily/styles",
-	"version": "2.1.0",
+	"version": "2.2.0",
 	"description": "My style library and utilities",
 	"type": "module",
 	"main": "dist/index.css",
