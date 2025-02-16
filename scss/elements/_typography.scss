@@ -1,5 +1,6 @@
 @use "../tools/typography";
 @use "../tools/colour";
+@use "../tools/spacing";
 
 small {
   @include typography.font-size("small");
@@ -27,6 +28,8 @@ h2 {
 }
 
 h3 {
+  @include spacing.margin-bottom("x-small");
+
   font-weight: 500;
 }
 
