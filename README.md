@@ -208,15 +208,15 @@ For two, add `__content` class containing two elements only:
 </footer>
 ```
 
-To align items to the left and right edges add `__item--justify-outside` to each element:
+To align items to the outside edges add `__item` to each element:
 
 ```html
 <footer class="ld-footer">
   <div class="ld-footer__content">
-    <p class="ld-footer__item--justify-outside">
+    <p class="ld-footer__item">
       Left-aligned content
     </p>
-    <p class="ld-footer__item--justify-outside">
+    <p class="ld-footer__item">
       Right-aligned content
     </p>
   </div>
